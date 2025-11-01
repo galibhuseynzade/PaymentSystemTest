@@ -1,7 +1,7 @@
 package ui.tests.accountTests;
 
-import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
 import ui.base.BaseTest;
 import ui.pages.AccountsPage;
 import ui.pages.HomePage;

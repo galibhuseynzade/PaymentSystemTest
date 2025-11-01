@@ -1,6 +1,6 @@
 package ui.tests.customerTests;
 
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 import ui.base.BaseTest;
 import ui.pages.CreateCustomerPage;
 import ui.pages.CustomersPage;

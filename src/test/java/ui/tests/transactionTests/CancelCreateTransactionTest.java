@@ -1,6 +1,6 @@
 package ui.tests.transactionTests;
 
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 import ui.base.BaseTest;
 import ui.pages.CreateTransactionPage;
 import ui.pages.HomePage;
