@@ -1,11 +1,11 @@
 package ui.tests.accountTests;
 
 import org.testng.annotations.Test;
-import ui.base.BaseTest;
+import base.BaseTestUI;
 import ui.pages.AccountsPage;
 import ui.pages.HomePage;
 
-public class CreateAccountTest extends BaseTest {
+public class CreateAccountTest extends BaseTestUI {
     @Test
     public void createAccountTest() {
         HomePage homePage = new HomePage(driver);

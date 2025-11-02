@@ -1,12 +1,12 @@
 package ui.tests.customerTests;
 
 import org.testng.annotations.Test;
-import ui.base.BaseTest;
+import base.BaseTestUI;
 import ui.pages.CreateCustomerPage;
 import ui.pages.CustomersPage;
 import ui.pages.HomePage;
 
-public class CancelCustomerCreationTest extends BaseTest {
+public class CancelCustomerCreationTest extends BaseTestUI {
     @Test
     public void cancelCustomerCreation() {
         HomePage homePage = new HomePage(driver);

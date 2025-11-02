@@ -2,13 +2,13 @@ package ui.tests.customerTests;
 
 import org.testng.annotations.Test;
 import org.openqa.selenium.WebElement;
-import ui.base.BaseTest;
+import base.BaseTestUI;
 import ui.pages.CustomersPage;
 import ui.pages.HomePage;
 
 import java.util.List;
 
-public class GetCustomersTest extends BaseTest {
+public class GetCustomersTest extends BaseTestUI {
     @Test
     public void getAllCustomers() {
         HomePage homePage = new HomePage(driver);

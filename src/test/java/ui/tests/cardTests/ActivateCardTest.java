@@ -2,13 +2,13 @@ package ui.tests.cardTests;
 
 import org.testng.annotations.Test;
 import org.openqa.selenium.WebElement;
-import ui.base.BaseTest;
+import base.BaseTestUI;
 import ui.pages.CardsPage;
 import ui.pages.HomePage;
 
 import java.util.List;
 
-public class ActivateCardTest extends BaseTest {
+public class ActivateCardTest extends BaseTestUI {
     @Test
     public void activateCardTest() {
         HomePage homePage = new HomePage(driver);

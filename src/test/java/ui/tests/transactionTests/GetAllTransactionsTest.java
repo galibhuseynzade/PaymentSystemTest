@@ -2,13 +2,13 @@ package ui.tests.transactionTests;
 
 import org.testng.annotations.Test;
 import org.openqa.selenium.WebElement;
-import ui.base.BaseTest;
+import base.BaseTestUI;
 import ui.pages.HomePage;
 import ui.pages.TransactionsPage;
 
 import java.util.List;
 
-public class GetAllTransactionsTest extends BaseTest {
+public class GetAllTransactionsTest extends BaseTestUI {
     @Test
     public void getAllTransactionsTest() {
         HomePage homePage = new HomePage(driver);

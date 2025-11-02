@@ -1,12 +1,12 @@
 package ui.tests.transactionTests;
 
 import org.testng.annotations.Test;
-import ui.base.BaseTest;
+import base.BaseTestUI;
 import ui.pages.CreateTransactionPage;
 import ui.pages.HomePage;
 import ui.pages.TransactionsPage;
 
-public class CreateTransactionTest extends BaseTest {
+public class CreateTransactionTest extends BaseTestUI {
     @Test
     public void createTransactionTest() {
         HomePage homePage = new HomePage(driver);

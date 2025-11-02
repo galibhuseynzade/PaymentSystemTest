@@ -2,13 +2,13 @@ package ui.tests.accountTests;
 
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
-import ui.base.BaseTest;
+import base.BaseTestUI;
 import ui.pages.AccountsPage;
 import ui.pages.HomePage;
 
 import java.util.List;
 
-public class ActivateAccountTest extends BaseTest {
+public class ActivateAccountTest extends BaseTestUI {
     @Test
     public void activateAccountTest() {
         HomePage homePage = new HomePage(driver);
