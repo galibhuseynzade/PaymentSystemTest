@@ -31,9 +31,9 @@ public class TransactionEndpoints {
     }
 
     public List<TransactionResponse> getTransactionsByCustomerId(Integer customerId) {
+        request.pathParam("customerId", customerId);
         TransactionResponse[] transactionResponseArray = given()
                 .spec(request)
-                .pathParam("customerId", customerId)
                 .when()
                 .get(ConfigReader.get("transactionEndpoint") + "/transactionsByCustomerId/{customerId}")
                 .then()
@@ -44,11 +44,11 @@ public class TransactionEndpoints {
     }
 
     public TransactionResponse createTransaction(String debit, String credit, BigDecimal amount) {
+        request.queryParam("debit", debit);
+        request.queryParam("credit", credit);
+        request.queryParam("amount", amount);
         return given()
                 .spec(request)
-                .queryParam("debit", debit)
-                .queryParam("credit", credit)
-                .queryParam("amount", amount)
                 .when()
                 .post(ConfigReader.get("transactionEndpoint") + "/transfer")
                 .then()

@@ -20,10 +20,10 @@ public class CustomerEndpoints {
     RequestSpecification request;
 
     public CustomerResponse createCustomer(CustomerRequest body) {
+        request.body(body);
         return given()
                 .spec(request)
                 .contentType(ContentType.JSON)
-                .body(body)
                 .when()
                 .post(ConfigReader.get("customerEndpoint"))
                 .then()

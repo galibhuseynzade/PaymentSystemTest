@@ -15,12 +15,12 @@ public class CreateCustomerTest extends BaseTestAPI {
     @Test
     public void createCustomerTest() {
         CustomerRequest customerRequest = CustomerRequest.builder()
-                .firstName("Will")
-                .lastName("Smith")
+                .firstName("James")
+                .lastName("Bond")
                 .birthDate(LocalDate.of(2000, 1, 1))
-                .finCode("AA00012")
-                .phoneNumber("+994707418526")
-                .email("willsmith@gmail.com")
+                .finCode("AA00007")
+                .phoneNumber("+994557418526")
+                .email("jamesbond@gmail.com")
                 .build();
 
         CustomerResponse response = customerEndpoints.createCustomer(customerRequest);

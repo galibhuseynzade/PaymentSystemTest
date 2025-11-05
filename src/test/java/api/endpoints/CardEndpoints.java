@@ -32,9 +32,9 @@ public class CardEndpoints {
     }
 
     public List<CardResponse> getCardsByCustomerId(Integer customerId) {
+        request.queryParam("customerId", customerId);
         CardResponse[] cardResponseArray = given()
                 .spec(request)
-                .pathParam("customerId", customerId)
                 .when()
                 .get(ConfigReader.get("cardEndpoint") + "/cardsByCustomerId/{customerId}")
                 .then()
@@ -57,9 +57,9 @@ public class CardEndpoints {
     }
 
     public CardResponse createCard(Integer customerId) {
+        request.pathParam("customerId", customerId);
         return given()
                 .spec(request)
-                .pathParam("customerId", customerId)
                 .when()
                 .post(ConfigReader.get("cardEndpoint") + "/{customerId}")
                 .then()
@@ -68,9 +68,9 @@ public class CardEndpoints {
     }
 
     public Boolean activateCard(String cardNumber) {
+        request.pathParam("cardNumber", cardNumber);
         return given()
                 .spec(request)
-                .pathParam("cardNumber", cardNumber)
                 .when()
                 .put(ConfigReader.get("cardEndpoint") + "/activateCard/{cardNumber}")
                 .then()
@@ -78,10 +78,10 @@ public class CardEndpoints {
     }
 
     public Boolean depositCard(String cardNumber, BigDecimal amount) {
+        request.pathParam("cardNumber", cardNumber);
+        request.pathParam("amount", amount);
         return given()
                 .spec(request)
-                .pathParam("cardNumber", cardNumber)
-                .queryParam("amount", amount)
                 .when()
                 .put(ConfigReader.get("cardEndpoint") + "/depositCard/{cardNumber}")
                 .then()

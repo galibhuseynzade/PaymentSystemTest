@@ -31,9 +31,9 @@ public class AccountEndpoints {
     }
 
     public List<AccountResponse> getAccountsByCustomerId(Integer customerId) {
+        request.pathParam("customerId", customerId);
         AccountResponse[] accountResponseArray = given()
                 .spec(request)
-                .pathParam("customerId", customerId)
                 .when()
                 .get(ConfigReader.get("accountEndpoint") + "/accountsByCustomerId/{customerId}")
                 .then()
@@ -56,9 +56,9 @@ public class AccountEndpoints {
     }
 
     public AccountResponse createAccount(Integer customerId) {
+        request.pathParam("customerId", customerId);
         return given()
                 .spec(request)
-                .pathParam("customerId", customerId)
                 .when()
                 .post(ConfigReader.get("accountEndpoint") + "/{customerId}")
                 .then()
@@ -67,9 +67,9 @@ public class AccountEndpoints {
     }
 
     public Boolean activateAccount(String accountNumber) {
+        request.pathParam("accountNumber", accountNumber);
         return given()
                 .spec(request)
-                .pathParam("accountNumber", accountNumber)
                 .when()
                 .put(ConfigReader.get("accountEndpoint") + "/activateAccount/{accountNumber}")
                 .then()
@@ -77,10 +77,10 @@ public class AccountEndpoints {
     }
 
     public Boolean depositAccount(String accountNumber, BigDecimal amount) {
+        request.pathParam("accountNumber", accountNumber);
+        request.queryParam("amount", amount);
         return given()
                 .spec(request)
-                .pathParam("accountNumber", accountNumber)
-                .queryParam("amount", amount)
                 .when()
                 .put(ConfigReader.get("accountEndpoint") + "/depositAccount/{accountNumber}")
                 .then()

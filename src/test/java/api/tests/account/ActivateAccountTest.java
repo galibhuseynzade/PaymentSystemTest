@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 public class ActivateAccountTest extends BaseTestAPI {
     @Test
     public void activateAccountTest() {
-        Boolean response = accountEndpoints.activateAccount("AZ037849376858038894");
+        Boolean response = accountEndpoints.activateAccount("AZ415454784938147621");
         Assert.assertTrue(response);
     }
 }

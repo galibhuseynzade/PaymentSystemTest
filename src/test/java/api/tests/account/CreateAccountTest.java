@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 public class CreateAccountTest extends BaseTestAPI {
     @Test
     public void createAccountTest() {
-        AccountResponse accountResponse = accountEndpoints.createAccount(29);
+        AccountResponse accountResponse = accountEndpoints.createAccount(31);
         Assert.assertNotNull(accountResponse);
         System.out.println(accountResponse.getAccountNumber());
     }
