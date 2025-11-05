@@ -1,16 +1,13 @@
 package api.tests.customer;
 
-import base.BaseTestAPI;
 import api.models.request.CustomerRequest;
 import api.models.response.CustomerResponse;
-import lombok.AccessLevel;
-import lombok.experimental.FieldDefaults;
+import base.BaseTestAPI;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.time.LocalDate;
 
-@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class CreateCustomerTest extends BaseTestAPI {
     @Test
     public void createCustomerTest() {
