@@ -24,7 +24,7 @@ public class BaseTestAPI {
     @BeforeClass
     public void setUp() {
         request = new RequestSpecBuilder()
-                .setBaseUri(ConfigReader.get("baseUrlAPI"))
+                .setBaseUri(ConfigReader.get("baseUrl"))
                 .addHeader("Authorization", "Bearer " + getToken())
                 .build();
 

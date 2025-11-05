@@ -13,7 +13,7 @@ public class BaseTestUI {
     @BeforeClass
     public static void setup() {
         driver = DriverManager.getDriver();
-        driver.get(ConfigReader.get("baseUrlUI"));
+        driver.get(ConfigReader.get("baseUrl") + "/login");
 
         LoginPage loginPage = new LoginPage(driver);
         loginPage.enterUsername(ConfigReader.get("adminUser"));
